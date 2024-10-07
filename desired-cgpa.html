@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Your Desired CGPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculate Your Desired CGPA</h1>
+
+    <div class="calculator">
+        <label for="desiredCGPA">Desired CGPA for Next Semester:</label>
+        <input type="text" id="desiredCGPA" placeholder="Desired CGPA for Next Semester">
+
+        <label for="currentCGPA">Current CGPA:</label>
+        <input type="text" id="currentCGPA" placeholder="Current CGPA">
+        <label for="previousCredits">Total Credits Completed Before This Semester:</label>
+        <input type="number" id="previousCredits" min="0" step="1" oninput="validateCredits()">
+        <p id="creditsError" class="error-message" style="color:red; display:none;">Please provide a valid number of credits (divisible by 3)</p><br><br>
+
+        <label for="nextCourses">Number of Courses Taken Next Semester:</label>
+        <select id="nextCourses">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <button onclick="calculateDesiredCGPA()">Calculate Required GPA</button>
+
+        <div id="desiredCGPAResult"></div>
+        <div id="gradeCombinations"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

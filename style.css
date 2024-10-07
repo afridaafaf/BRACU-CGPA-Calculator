@@ -1,0 +1,143 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Title Styling */
+#title {
+    font-size: 36px;
+    color: royalblue; /* Royal Blue color for the title */
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Option Boxes Container */
+.option-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+/* Styling for Each Option Box */
+.option-box {
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    transition: 0.3s ease;
+}
+
+.option-box:hover {
+    border-color: royalblue;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Option Links Styling */
+.option-link {
+    text-decoration: none;
+    font-size: 18px;
+    color: royalblue;
+    font-weight: bold;
+    display: block;
+    padding: 20px;
+    background-color: #e6f2ff;
+    border-radius: 8px;
+}
+
+.option-link:hover {
+    background-color: #cce0ff;
+}
+
+/* Styling for Calculator Pages */
+.calculator {
+    background-color: white;
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+    text-align: left;
+}
+
+/* Title Styling for Calculator Pages */
+h1 {
+    color: royalblue;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Input and Label Styling */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%; /* Ensure all input fields have the same width */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Make sure padding doesn't affect width */
+}
+
+/* Button Styling */
+button {
+    background-color: #28a745; /* Green background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; /* Button will also have full width to match input fields */
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Error Message Styling */
+.error-message {
+    font-size: 14px;
+    color: red;
+}
+
+/* Result Display Styling */
+p {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+#currentCGPAResult, #desiredCGPAResult {
+    margin-top: 20px;
+}
+
+/* Grade Combinations Section */
+#gradeCombinations {
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#gradeCombinations h3 {
+    color: royalblue;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#gradeCombinations p {
+    font-size: 16px;
+    color: #555;
+}

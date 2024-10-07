@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Semester CGPA Calculation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Title Section -->
+    <h1>Calculate Current Semester's CGPA</h1>
+
+    <!-- Form for calculating current semester CGPA -->
+    <div class="calculator">
+
+        <!-- Previous CGPA Input -->
+        <label for="previousCGPA">Previous CGPA:</label>
+        <input type="number" id="previousCGPA" step="0.01" min="0" max="4" oninput="validateCGPA()">
+        <p id="cgpaError" class="error-message" style="color:red; display:none;">Provide a valid CGPA (0.00 - 4.00)</p><br><br>
+
+        <!-- Total Credits Completed Input -->
+        <label for="previousCredits">Total Credits Completed Before This Semester:</label>
+        <input type="number" id="previousCredits" min="0" step="1" oninput="validateCredits()">
+        <p id="creditsError" class="error-message" style="color:red; display:none;">Please provide a valid number of credits (divisible by 3)</p><br><br>
+
+        <!-- Number of Courses Option -->
+        <label for="numCourses">Number of Courses Taken This Semester:</label>
+        <select id="numCourses" onchange="generateGradeInputs()">
+            <option value="" disabled selected>Select number of courses</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select><br><br>
+
+        <!-- Dynamic Grade Inputs -->
+        <div id="gradeInputs"></div>
+
+        <!-- Calculate Button -->
+        <button onclick="calculateCurrentCGPA()">Calculate CGPA</button>
+        <p id="currentCGPAResult"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
